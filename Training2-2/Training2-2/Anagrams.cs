@@ -7,17 +7,24 @@ namespace Training2_2
     public class Anagrams
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CalculateNumberOfAnagramsForWordThatHasRepetedChars()
         {
             string word = "mississippi";
             Assert.AreEqual(34650, CalculateAnagrams(word));
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void CalculateNumberOfAnagramsForWordThatHasNonRepetedChars()
         {
             string word = "math";
             Assert.AreEqual(24, CalculateAnagrams(word));
+        }
+
+        [TestMethod]
+        public void CalculateNumberOfAnagramsForWordThatHasOnlyRepetedChars()
+        {
+            string word = "bbb";
+            Assert.AreEqual(1, CalculateAnagrams(word));
         }
 
         private static double CalculateAnagrams(string word)
